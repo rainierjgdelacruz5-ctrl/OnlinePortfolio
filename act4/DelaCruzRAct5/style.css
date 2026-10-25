@@ -1,0 +1,98 @@
+body{
+    background-color: rgb(252, 211, 161);
+    padding: 20px;
+}
+
+
+
+
+.links{
+display: flex;
+align-items: center;
+justify-content: space-between;
+position: sticky;
+top:0;
+background-color: rgb(250, 234, 92);
+border-radius: 5%;
+border:3px solid gold;
+}
+
+a{
+    text-decoration: none;
+}
+section{
+
+    background-color: rgb(250, 234, 92);
+    padding: 10;
+}
+
+li a{
+    
+    color: rgb(22, 22, 22);
+    font-weight: bold;
+    font-size: 1rem;
+}
+nav a:hover{
+    background-color: rgb(87, 233, 252);
+    border-radius: 10%;
+    text-transform: uppercase;
+    text-decoration: underline;
+    
+}
+
+
+section h1:hover{
+    background-color: rgb(87, 233, 252);
+    border-radius: 10%;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+section h2:hover{
+    background-color: rgb(87, 233, 252);
+    border-radius: 10%;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+ul{
+    list-style: none;
+}
+
+h1 {
+    color: rgb(99, 149, 241);
+}
+
+h2{
+    color: rgb(99, 149, 241);
+}
+p{
+    color: rgb(36, 34, 34);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+footer{
+    background-color: rgb(67, 212, 248);
+    padding: 3px;
+    text-align: center;
+    
+
+}
+
+.logo img{
+    width: 100px;
+    height: 100px;
+}
+
+.about img{
+    height: 100%;
+    width: 100%;
+}
+
+
+footer p:hover{
+    background-color: rgb(87, 233, 252);
+    border-radius: 10%;
+    text-transform: uppercase;
+    text-decoration: underline;
+}

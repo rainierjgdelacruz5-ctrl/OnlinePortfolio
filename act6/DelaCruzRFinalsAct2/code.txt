@@ -1,0 +1,49 @@
+function showMessage(text)
+{
+    message.innerHTML = text
+}
+
+Button.addEventListener("click", function(){
+    message.innerHTML= "Loading...."
+
+    setTimeout(function(){
+        showMessage("Welcome to JavaScript")
+    },3000)
+})
+
+
+function loadMessage(){
+    return new Promise(function(resolve,reject)
+{
+    setTimeout(function(){
+
+        let success = true
+        if(success){
+            resolve("Welcome to PDM")
+        }else{
+            reject("Failed to Load")
+        }
+
+
+    },3000)
+
+})
+}
+
+Button.addEventListener("click", function(){
+    message.innerHTML = "Loading..."
+
+    loadMessage()
+
+    .then(function(result){
+        message.innerHTML = result
+    })
+
+    .catch(function(error){
+        message.innerHTML = error
+    })
+
+
+
+
+})

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Registartion Form</title>
+</head>
+
+<body style="margin: 0;">
+    
+<header style="background-color: rgb(255, 230, 0); padding: 20px; text-align: center;"> 
+        <h1>Student Registration Form </h1>
+        <p> Apply Student Form</p>
+</header>
+
+
+<nav style="background-color: pink; display: flex; justify-content: center; gap: 100px; padding: 10px;">
+
+    <a href="HOME.html">HOME</a>
+    <a href="FORM.html">REGISTRATION FORM</a>
+    <a href="TABLE.html">GRADE TABLE</a>
+    <a href="PROFILE.html">MY PROFILE</a>
+    
+</nav>
+
+<form>
+STUDENT NAME:
+<br>
+<input type="text" name="stud_name"/>
+<br><br>
+STUDENT NUMBER:  
+<br>
+<input type="text" name="stud_num"/>
+<br><br>
+EMAIL: 
+<br>
+<input type="text" name="email"/>
+<br> <br>
+
+
+GENDER:
+<br> 
+    <input type="radio" name="gender" value="male"> MALE
+    <input type="radio" name="gender" value="female"> FEMALE
+<br><br><br>
+
+COURSE: <br>
+
+<select name="dropdown">
+
+<option value="BSIT" selected>BSIT</option>
+<option value="BSCS" selected>BSCS</option>
+<option value="BSTM" selected>BSTM</option>
+<option value="BSHM" selected>BSHM</option>
+
+</select>
+<br> <br>
+Skills <br>
+
+<input type="checkbox" name="html" value="on"> HTML
+<input type="checkbox" name="css" value="on"> CSS
+<input type="checkbox" name="java" value="on"> JAVASCRIPT
+<br>
+<br>
+<br>
+
+<input type="file" name="fileupload" accept="image/*" />
+<br><br>
+
+
+
+
+ADDRESS : <br />
+<textarea rows="5" cols="50" name="description" placeholder= Enter description here...”></textarea>
+
+
+
+
+
+<br>
+<br>
+<input type="submit" name="submit" value="Submit" />
+<input type="reset" name="reset"  value="Reset" />
+
+
+
+
+
+</form>
+
+
+
+
+
+<footer style="background-color: rgb(241, 133, 125); text-align: center;padding: 15px;"> COPYRIGHT@2026 </footer>
+
+
+
+
+<!-- Back to portfolio button -->
+<style>
+#back-to-portfolio{position:fixed;top:14px;left:14px;z-index:2147483647;display:inline-flex;align-items:center;gap:.45rem;padding:10px 18px;border-radius:999px;background:#1E2B25;color:#F6F1E4;font:700 14px/1 "Segoe UI",system-ui,Arial,sans-serif;text-decoration:none;border:2px solid #F6F1E4;box-shadow:0 4px 14px rgba(0,0,0,.28);transition:background .2s,transform .2s}
+#back-to-portfolio:hover{background:#D4647F;transform:translateY(-2px)}
+#back-to-portfolio:focus-visible{outline:3px solid #D4647F;outline-offset:3px}
+</style>
+<a id="back-to-portfolio" href="../../index.html">&#8592; Back to Portfolio</a>
+</body>
+</html>
