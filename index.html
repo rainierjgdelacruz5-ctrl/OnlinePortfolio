@@ -72,7 +72,7 @@
           <p class="section-subtitle">Get to know me</p>
         </div>
         <div class="about-box">
-          
+          <!-- EDIT: write your own introduction here -->
           <p>
             99% bugs, 1% pure luck, 100% BSIT student. Making websites with HTML, CSS, and JS until it works!
           </p>
@@ -112,12 +112,19 @@
         <h2 class="section-title">My activities</h2>
         <p class="section-subtitle">Laboratory works &amp; projects</p>
 
-        
+        <!--
+                HOW TO ADD YOUR OWN WORK
+                1. Put your activity files inside its folder (act1, act2, ...). Keep the main page named index.html.
+                2. Edit the title and description of the card below.
+                3. (Optional) Add a screenshot to contents/images/ and replace the placeholder <div> with:
+                   <img src="contents/images/act1.png" alt="Laboratory Activity 1">
+            -->
         <div class="project-grid">
           <!-- Activity 1 -->
           <article class="project-card">
             <div class="img-container">
-              <div class="placeholder"><b>1</b>Preview coming soon</div>
+              <iframe class="preview-frame" src="act1/DelaCruzRBSIT31A/Welcome.html" title="Preview of Laboratory Activity 1" loading="lazy" tabindex="-1" scrolling="no" aria-hidden="true"></iframe>
+              <a class="preview-link" href="act1/DelaCruzRBSIT31A/Welcome.html" aria-label="Open Laboratory Activity 1"></a>
             </div>
             <div class="project-body">
               <span class="project-badge">Lab 01</span>
@@ -130,7 +137,8 @@
           <!-- Activity 2 -->
           <article class="project-card">
             <div class="img-container">
-              <div class="placeholder"><b>2</b>Preview coming soon</div>
+              <iframe class="preview-frame" src="act2/DelaCruzR_BSIT31A_ACT3/HOME.html" title="Preview of Laboratory Activity 2" loading="lazy" tabindex="-1" scrolling="no" aria-hidden="true"></iframe>
+              <a class="preview-link" href="act2/DelaCruzR_BSIT31A_ACT3/HOME.html" aria-label="Open Laboratory Activity 2"></a>
             </div>
             <div class="project-body">
               <span class="project-badge">Lab 02</span>
@@ -143,7 +151,8 @@
           <!-- Activity 3 -->
           <article class="project-card">
             <div class="img-container">
-              <div class="placeholder"><b>3</b>Preview coming soon</div>
+              <iframe class="preview-frame" src="act3/DelaCruzRAct4/home.html" title="Preview of Laboratory Activity 3" loading="lazy" tabindex="-1" scrolling="no" aria-hidden="true"></iframe>
+              <a class="preview-link" href="act3/DelaCruzRAct4/home.html" aria-label="Open Laboratory Activity 3"></a>
             </div>
             <div class="project-body">
               <span class="project-badge">Lab 03</span>
@@ -156,7 +165,8 @@
           <!-- Activity 4 -->
           <article class="project-card">
             <div class="img-container">
-              <div class="placeholder"><b>4</b>Preview coming soon</div>
+              <iframe class="preview-frame" src="act4/DelaCruzRAct5/home.html" title="Preview of Laboratory Activity 4" loading="lazy" tabindex="-1" scrolling="no" aria-hidden="true"></iframe>
+              <a class="preview-link" href="act4/DelaCruzRAct5/home.html" aria-label="Open Laboratory Activity 4"></a>
             </div>
             <div class="project-body">
               <span class="project-badge">Lab 04</span>
@@ -169,7 +179,8 @@
           <!-- Activity 5 -->
           <article class="project-card">
             <div class="img-container">
-              <div class="placeholder"><b>5</b>Preview coming soon</div>
+              <iframe class="preview-frame" src="act5/DelaCruzRFinalsAct1/act1.html" title="Preview of Laboratory Activity 5" loading="lazy" tabindex="-1" scrolling="no" aria-hidden="true"></iframe>
+              <a class="preview-link" href="act5/DelaCruzRFinalsAct1/act1.html" aria-label="Open Laboratory Activity 5"></a>
             </div>
             <div class="project-body">
               <span class="project-badge">Lab 05</span>
@@ -182,7 +193,8 @@
           <!-- Activity 6 -->
           <article class="project-card">
             <div class="img-container">
-              <div class="placeholder"><b>6</b>Preview coming soon</div>
+              <iframe class="preview-frame" src="act6/DelaCruzRFinalsAct2/index.html" title="Preview of Laboratory Activity 6" loading="lazy" tabindex="-1" scrolling="no" aria-hidden="true"></iframe>
+              <a class="preview-link" href="act6/DelaCruzRFinalsAct2/index.html" aria-label="Open Laboratory Activity 6"></a>
             </div>
             <div class="project-body">
               <span class="project-badge">Lab 06</span>
@@ -217,5 +229,31 @@
       <p>© 2026 Rainier Julliane G. Dela Cruz · BSIT31A Portfolio</p>
       <p><a href="#home">Back to top</a></p>
     </footer>
+  
+    <script>
+      // Scale each live preview (rendered at 1280px wide) to fit its card
+      (function () {
+        var boxes = document.querySelectorAll(".img-container");
+        function fit() {
+          boxes.forEach(function (box) {
+            var f = box.querySelector(".preview-frame");
+            if (f) f.style.transform = "scale(" + box.clientWidth / 1280 + ")";
+          });
+        }
+        function clean(f) {
+          // hide the "Back to Portfolio" button inside previews
+          try {
+            var b = f.contentDocument.getElementById("back-to-portfolio");
+            if (b) b.style.display = "none";
+          } catch (e) {}
+        }
+        document.querySelectorAll(".preview-frame").forEach(function (f) {
+          f.addEventListener("load", function () { clean(f); });
+        });
+        window.addEventListener("resize", fit);
+        window.addEventListener("load", fit);
+        fit();
+      })();
+    </script>
   </body>
 </html>
