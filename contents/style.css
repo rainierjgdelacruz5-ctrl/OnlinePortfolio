@@ -95,6 +95,8 @@ section{padding:clamp(3.5rem,8vw,6.5rem) 0}
 .project-card:hover{transform:translate(-4px,-4px);box-shadow:8px 8px 0 var(--forest)}
 .img-container{position:relative;aspect-ratio:16/10;background:var(--sage-soft);border-bottom:2px solid var(--forest);display:grid;place-items:center;overflow:hidden}
 .img-container img{width:100%;height:100%;object-fit:cover}
+.preview-frame{position:absolute;top:0;left:0;width:1280px;height:800px;border:0;background:#fff;transform-origin:0 0;pointer-events:none}
+.preview-link{position:absolute;inset:0;z-index:2}
 .placeholder{text-align:center;color:var(--sage-deep);font-weight:700;padding:1rem}
 .placeholder b{display:block;font-family:var(--display);font-size:4.5rem;line-height:1;color:var(--forest);opacity:.85}
 .project-body{padding:1.4rem 1.5rem 1.6rem;display:flex;flex-direction:column;gap:.5rem;flex:1}
